@@ -1,0 +1,503 @@
+java8--> memory
+
+outOfmemoryerror-->metaspace
+
+lambda, stream
+
+concurrency
+|
+runnable interface
+Thread class
+
+
+Advanced
+|
+Thread pool--> ExecutorService
+
+
+synchronized
+Atomic
+
+
+NIO-> files, path
+
+db
+
+---------------------
+oops-->
+primitive type
+
+
+int i=100;
+
+Integer i2= 100;
+
+
+String s1= new String("Hello");
+String s2= new String("Hello");
+
+String pool--> 
+
+stack memory			Heap memory
+
+i  100
+
+i2  0x112				0x112	100
+
+s1 0x111						0x111 Hello
+
+s2 0x222				0x222 Hello
+
+if(i==i2)--> false
+
+
+
+if(s1==s2)-->false
+
+if(s1.equals(s2))---> true
+
+Object class
+|
+
+class Classname(
+
+	fields
+	constructor
+	methods equals, hashcode, toString()
+
+}
+
+
+---------------------------
+
+final
+|
+final variable ----> constant
+method-----> cant override
+class---> cant inherited
+
+rt m1(int q){...}
+rt m1(int r, String s){..}  // method Overloading
+
+//constructor
+
+public ClassName(parameter1){
+
+// initialize the object
+}
+
+public ClassName(parameters1, parameters2){
+}
+// constructor overloading
+
+
+class Employee{
+
+...
+}//parent 
+
+class Manager extends Employee{
+
+}// child
+
+----------------------------------------
+
+static
+
+|
+variable----> class variable
+
+var----> instance===> objname.instancevar
+   ----> static / class 
+
+className.staticvar //valid   --> recommended-> read
+objectname.staticVar //valid
+
+
+|
+method
+
+- static method works with static var
+
+-> Classname.staticMethod()// valid
+
+|
+blocks
+before jdk8
+========
+{statements
+}
+
+=======
+
+static{
+
+}
+
+
+=============
+
+
+import pkgnae.classname;
+
+//import pkg1.A;
+import pkg2.A;
+
+class{
+
+pkg1.A.m1();
+A.m2();
+
+}
+
+===========
+p1.p2---c1
+ 
+class p1-->  m1()
+class p2--> m1()
+
+c1 extends p1,p2
+
+c1.m1()-->
+
+====
+ interface--->
+Abstract classs---> additional feature
+
+============
+
+before jdk8
+=========
+interface InterfaceName{
+
+	fields    ---> public static final type  var= value;
+	methods ---> public static abstract returnType methodName(arg);// only declaration
+}
+
+jdk9
+=====
+methods defn allowed
+
+interface---> default method ---> instanceOfInterface.defaultMethod()
+	----> static method ---> InterfaceName.staticMethod()
+
+interface i1{
+void m1();
+default void m2(){
+  // default code
+}
+
+static void m3(){
+//
+}
+}
+
+class A implements i1
+{.void m1(){
+//
+}
+void m2(){
+//
+}
+.}
+
+class B implements i1{...}
+....
+.void m1(){
+//
+}
+}
+
+
+java9
+====
+private method -> support default method and static method-> code reusuability
+
+interface i1{
+void m1();
+default void m2(){
+  	// default code
+	 m2a();
+}
+
+private void m2a(){ // to support default method
+//
+}
+
+private static void m3a(){
+	// to support staticmethod
+}
+
+
+static void m3(){
+	m3a();
+}
+}
+=====================================================================================
+
+
+Enum---> constants
+
+
+public enum  enumName{
+
+	VALUE1,
+	VALUE2,
+	VALUE3;
+}
+
+public enum planets{
+MERCURY,VENUS...;
+}
+
+
+============================================================
+
+
+
+public class Pizza{
+
+	public enum PizzaStatus{
+	ORDERED,READY,DELIVERED;}
+	private PizzaStatus status;
+
+	public int getDaysForStatus(){
+	
+	switch(status){
+
+		case ORDERED : return 3;
+
+		case READY : return 2;
+
+		case DELIVERED : return 0;
+	}
+	return 0;	
+}
+=====================================================================
+public class Pizza{
+	private PizzaStatus status;  / getter status method
+	int timetoDelivery;
+	public enum PizzaStatus{
+	ORDERED(3){
+	public boolean isOrdered(){
+	return true;
+	}
+
+	},
+	READY(2){
+
+	}
+
+	,DELIVERED(0);
+
+	public int getTimeToDelivery(int time){
+		
+	this.timetoDelivery= time;
+		
+	}
+
+	
+	public boolean isDeliverable(){
+		if(getStatus()== PizzaStatus.READY){
+			return true;
+		}
+		return false;
+	}
+
+}
+class Driver{
+
+	public static void main(String args[]){
+
+		Pizza obj = new Pizza();
+		obj.isDeliverable();
+			
+============================================
+down cat ===> new Manager()
+Employee e= new Manager(); //
+
+
+
+interface i1{
+
+void m1();
+}
+
+
+
+class A{
+
+
+
+
+public static void main(String args[]){
+	i1  intRef= new i1(){
+
+	public void m1(){
+
+		Sysout("Hello");
+		}
+	};// Anonymous inner class
+
+	intRef.m1();// method call to int method
+	
+
+			
+}
+
+
+}
+
+======================================
+java.util.function
+
+
+Function<T,R> - accepts 1 arg and returns 1 value
+Consumer<T>---> accepts 1 arg, no value returned
+Supplier<R>---> no input, returns value
+Predicate<T>--> condition
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
