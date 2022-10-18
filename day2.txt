@@ -1,0 +1,296 @@
+oop
+|-> class , method, constructor.
+
+super-> parent
+
+class A{
+
+int i;
+public A(int i){
+
+this.i= i;
+// parent obj initialization
+}
+void p(){}
+}
+class B extends B{
+int j;
+public B(){
+// child obj initialization
+super();----> call to parent constructor
+}
+void p(){}//----> called
+void m1(){
+super.p();
+}
+}
+=========================================
+final-> var->constant
+-> method -> avoid overriding
+-> class-> avoid inheritance
+
+
+static-> var
+-> method
+-> block
+-> import
+
+
+===============================
+Object class-> equals()
+-> hashcode()
+-> toString()
+public void m1(){...}---> parent class
+
+public void m1(){..}---> child class
+// valid
+
+private void m1(){..}
+
+====================================
+
+variable arg, overloading
+m()  m(1,2,3)
+================
+
+Interface-> 
+before jdk8--> abstract method
+jdk8--> default method, static method -> concrete 
+
+obj.defaultmethod()
+interfaceName.staticmethod()
+
+jdk9---> private method, private static  method
+
+|--> named class,anonymous innerclass
+
+|-> lambda exp (but for functional i/f)
+
+|-> method ref->   
+
+	obj :: methodName
+	s:: toUpperCase
+
+	ClassName::staticMethodNAme
+
+	String :: copyValueOf
+
+====================================================
+
+Exception Handling
+
+Generic programming
+|--> Collection
+
+
+================
+
+Exception Handling---> 
+
+
+Throwable class--> parent class
+|
+----> Exception (must be handled)
+	|---> checked Exception class..
+	|----> Unchecked Exception--> RunTimeException
+-----> Error ( may be  handled)
+	|---> unchecked
+checked Exception ---> situational 
+Unchecked Exception ---> usage -
+Error
+
+=======
+
+try{
+// exception
+}
+catch(Exception e){ // e-> cause odf Exception
+e.printStackTrace();
+}
+void m2(){
+	m1();
+
+}
+try block
+void m1() throws FileNotFoundException{// method signature
+
+try{
+// exception throwed to caller method 
+// open a file
+}
+
+}
+
+try.. catch
+
+try.. catch(FileNotFoundException e)..catch(IOException e)
+
+throws clause
+
+throw keyword----> 
+
+void m1(){// method signature
+
+try{
+// exception throwed to caller method 
+// open a file
+}catch(FileNotFoundException e){
+	throw new Exception(e);// wrap and throw
+}
+
+}
+
+
+==========
+
+finally{}
+=====
+try{}finnally{}
+try{}catch{}finally{}
+
+exception--> try-> catch-> finally
+No Exception -> try-> finally
+void m1(){
+line-1;
+try{
+line0;
+//line1--> exception e1
+//line1a;
+// line2-> exception e2
+line 2a;
+}
+catch(IllegalArgumentException e1){stm1}
+catch(FileNotException e2){ stm2
+}
+
+line100
+}
+//line1 exception
+line-1  -->line0-> lin1-> stm1
+
+// line2 exception
+line-1 -> line0-> line1-> line1a -> line 2-> stm2-> line100
+
+// no exception
+
+line-1 -> line0 -> line1 -> line 1a -> line 2 -> line2a-> line100
+====================================================
+
+catch(FileNotFoundException | IOException e){
+// same way
+}
+
+1. try block
+try{
+//...
+}
+2. try with resource way // 
+try(initialization){
+..
+}
+
+try(initialization1;
+initialization2){
+// 
+}
+
+
+Autocloseable interface implement
+
+==============================
+
+
+try(scanner = new Scanner(new File("C:\\Users\\Theeba\\sample.txt"){
+
+
+}
+
+//java9-> final var  or effective final
+final Scanner scanner = new Scanner(new File("C:\\Users\\Theeba\\sample.txt"; // final var
+
+PrintWriter pw = new PrintWriter(...) // effective final---> var initialized only once during initialization.
+
+try(scanner;pw;)
+
+
+
+java Employee.java--> jvm explicitly create a Class obj for Employee
+
+class Employee{
+
+Student obj = new Student();
+
+obj.getClass()----> Class class object
+	|
+	Object class
+
+obj.getClass().getName()
+		|
+		Class class
+
+========================================
+
+Assertion--> test failure 
+assert booleanexp
+asser booleanexp
+
+AssertionError--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
