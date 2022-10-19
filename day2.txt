@@ -236,6 +236,41 @@ asser booleanexp
 
 AssertionError--->
 
+Integer s = new Integer(100);
+
+
+Integer i = 100;
+Autoboxing ==> Integer s = new Integer(100)
+
+
+int i=100;
+
+=======================
+
+T,U -> any Type
+E -> any type of Element
+K -> any type of Key
+V -> any Type of Value
+?---> wildcard character  - anyType
+
+<? extends ClassName>  upperbound
+
+<? super ClassName>  lowerbound
+------------------------------------------------
+List-> Sequential collection, ordered--> insertion order, duplication allowed
+Set--> sequential, unique elements
+
+Set<Integer> set= new Treeset<>();
+set.add(10);
+set.add(10);---> 
+
+
+
+Map
+====
+{{k,v},{k,v}}
+
+0....n
 
 
 
