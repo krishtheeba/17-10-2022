@@ -1,0 +1,157 @@
+Exceptional Handling- 
+try with resource
+throw->
+throws clause
+finally
+Assertion
+====
+
+Generic Programming--> 
+
+class ClassName<T>{
+..
+
+}
+
+<T> rt methodName(parameter<T>){...statments .}
+< ? extends ClassName>--> upperbound
+<? super ClassName > ---> lowerBound
+
+List-> i/f---> ArrayList
+
+|---> Fail fast iteration---> 
+================
+
+1. Customer class -> name ,id
+2. Record -> Map<name,Customer Obj>
+3. addCustomer
+4. getCustomers
+
+==========================================
+
+Comparable interface
+|-------------------------
+
+class Customer<T> implements Comparable<T>{
+
+int compareTo(T obj){
+	Customer temp = (Customer) obj;
+
+	if	
+
+}
+
+
+}
+
+
+Comparator Interface
+
+
+------------------------
+unmodifiableMap
+===============
+Map resmap =Collections.unmodifiableMap(mutuableMap)
+
+immutable map
+==========
+
+Map.of("1","one","2","two)---> map from a sequence
+
+Map.ofEntries(Map.entry("1","Apple"),Map("2","Banana"))
+=====================================================
+
+synchronized(obj){
+// operation
+
+
+obj.release()
+}
+
+
+T1      T2     T3
+
+	obj.wait()
+========
+
+(Integer i, Integer j)-> i+j
+====================================================================================================================================
+
+
+Ex:
+config.log
+==========
+Interface=eth0 -> K,v===> Interface,eth0
+onboot = none
+Bootproto =none
+Prefix=24
+IPAddr=10.20.30.40
+
+1. read config file line by line
+2. create a HashMap with the content
+3. change attribute of Interface to eth1   (use replace method of map)
+4. change onboot from none to true
+5. write hashmap to new config file   
+
+io   |    NIO
+
+stream==> iterable objects
+=========================================
+
+
+Stream--> byte--> bytestream
+  -> character---> readr
+
+Stream Api---> functional programming
+-> source data is not affected
+
+Stream--> iterable objects---> 
+characteristics
+=============
+1. stream objects cant be reused.
+2. immutable
+3. Lazy Invocation methods
+
+sequence of predefined behaviors without source affecting---> stream API
+
+		|
+
+	Intermediatory operation  (stream,stream) filter(), map()
+
+......10 obj...filter(test)---> predicate(test condition)--> True--> 
+
+......10...map(Function)--> 10
+
+	Ternary operation (stream, Type) count(), collect(), findFirst(), FindAny()
+
+pipelinning operation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
